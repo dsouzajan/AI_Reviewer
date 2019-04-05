@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Reviewer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheets/style.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Amazon extensive reviews are too much of a hassle?</h1>
+        <p>Bringing Reviewer! The solution to your product reviewing problems on Amazon</p>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Main Content Container -->
+        <div class="row">
+          <!-- Using BS Grid System -->
+          <div class="col-md-8 ">
+            <!-- Display welcome Form to the user -->
+              <div class="form-group">
+                <label for="comment_query">"Enter URL : "</label>
+                <textarea class="form-control" rows="10" cols="40" id="comment_query"></textarea>
+              </div>
+              <button id="analyze_text" class="btn btn-block btn-primary">Analyze!</button>
+          </div>
+          <div class="col-md-4">
+            <h4>Instructions</h4>
+            <p>
+              {{results}}
+            </p>
+          </div>
+          <!-- End of welcome message + submission form -->
+        </div>
+	<hr>
+        <div id="loader" class='container'>
+            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div id="result_text">{{results}}</div>
+			<div class="card-body">
+                <canvas id="myPieChart"></canvas>
+            </div>
+		
+	      </div>
+		<div class="col-md-4">
+			
+		</div>
+
+        </div>
+
+      <!-- End of Main Content Container -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="static/js/main.js"></script>
+	
+	
+  </body>
+
+</html>
